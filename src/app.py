@@ -1,12 +1,12 @@
 from flask import Flask, request, render_template
-import joblib
+from model import Model
 
 app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
-        model = joblib.load('model/capstone_catboost_model.pkl')
+        model = Model()
         
         age = int(request.form['age']) # MIN - 19 MAX - 80
         zip_code = int(request.form['zip_code']) # MIN - 90001 MAX - 96150
