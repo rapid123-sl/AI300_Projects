@@ -1,6 +1,13 @@
 # AI300_Projects
 
-## Folder Structure.
+## Codebase Author
+
+```
+Samuel
+
+```
+
+## Folder Structure
 
 ```
 ├── model
