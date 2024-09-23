@@ -8,28 +8,44 @@
     <h1>Churn  Prediction</h1>
     <form method="POST">
         <label for="age">Age:</label><br>
-        <input type="text" id="age" name="age"><br><br>
+        <input type="number" step="1" id="age" name="age" value="30" min="0" max="80"
+                title="Please enter a valid number"><br><br>
         
         <label for="zip_code">Zip Code:</label><br>
-        <input type="text" id="zip_code" name="zip_code"><br><br>
+        <input type="number" step="1" id="zip_code" name="zip_code" value="90001" min="90001" max="96150"
+                title="Please enter a zipcode between 90001-96150"><br><br>
         
         <label for="contract_type">Contract Type:</label><br>
-        <input type="text" id="contract_type" name="contract_type"><br><br>
+        <select id="contract_type" name="contract_type">
+            <option value="One Year" selected>One Year</option>
+            <option value="Month-to-Month">Month-to-Month</option>
+            <option value="Two Year">Two Year</option>
+        </select><br><br>
         
         <label for="has_internet_service">Has Internet Service:</label><br>
-        <input type="text" id="has_internet_service" name="has_internet_service"><br><br>
+        <select id="has_internet_service" name="has_internet_service">
+            <option value="yes">yes</option>
+            <option value="no" selected>no</option>
+        </select><br><br>
         
         <label for="total_monthly_fee">Total Monthly Fee:</label><br>
-        <input type="text" id="total_monthly_fee" name="total_monthly_fee"><br><br>
+        <input type="number" step="0.01" id="total_monthly_fee" name="total_monthly_fee" value="20.00" min="18.25" max="118.75"
+                title="Please enter a valid monthly fee"><br><br>
         
         <label for="payment_method">Payment Method:</label><br>
-        <input type="text" id="payment_method" name="payment_method"><br><br>
+        <select id="payment_method" name="payment_method">
+            <option value="Credit Card" selected>Credit Card</option>
+            <option value="Bank Withdrawal">Bank Withdrawal</option>
+            <option value="Mailed Check">Mailed Check</option>
+        </select><br><br>
         
         <label for="tenure_months">Tenure Months:</label><br>
-        <input type="text" id="tenure_months" name="tenure_months"><br><br>
+        <input type="number" step="1" id="tenure_months" name="tenure_months" value="12" min="1" max="72"
+                title="Please enter a valid number"><br><br>
         
         <label for="num_of_referrals">Number of Referrals:</label><br>
-        <input type="text" id="num_of_referrals" name="num_of_referrals"><br><br>
+        <input type="number" id="num_of_referrals" name="num_of_referrals" value="1" min="0" max="11"
+                title="Please enter a valid number"><br><br>
         
         <input type="submit" value="Submit">
     </form>

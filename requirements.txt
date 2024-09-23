@@ -1,2 +1,14 @@
 Flask==3.0.3
+
+sqlalchemy
+pandas
+plotly
+numpy
+matplotlib
+scipy
+scikit-learn
+xgboost
+catboost
+
 joblib
+pathlib
