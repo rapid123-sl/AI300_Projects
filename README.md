@@ -22,9 +22,7 @@
 
 ## Website URL of deployed Flask web application 
 
-[Dockerhub URL](TBC)
-
-[Deployed Web App URL](TBC) 
+(TBC)
 
 ## Details on chosen final model and model parameters
 
