@@ -2,18 +2,31 @@ body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
+    padding: 100px;
 }
 
 h1 {
-    text-align: center;
+    text-align: right;
     color: #333;
 }
 
-form {
+.container {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.left-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-container {
     background-color: #74a6f3;
     padding: 20px;
     border-radius: 10px;
@@ -26,7 +39,9 @@ label {
     color: #444;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"],
+select {
     width: 100%;
     padding: 10px;
     margin: 5px 0 20px 0;
@@ -52,6 +67,6 @@ input[type="submit"]:hover {
 
 h2 {
     color: #333;
-    text-align: center;
+    text-align: right;
     margin-top: 20px;
 }
