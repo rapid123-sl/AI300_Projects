@@ -42,14 +42,25 @@ def home():
                       payment_method, tenure_months, num_referrals]
         
         prediction = model.predict(parameters)
+        if prediction == 0:
+            prediction = "will likely not churn"
+        elif prediction == 1:
+            prediction = "will likely churn"
         
-        return render_template('home.html', prediction=prediction)
+        percentyeschurn = round(model.predict_proba(parameters)[1]*100, 2)
+        percentnochurn = round(model.predict_proba(parameters)[0]*100, 2)
         
-    return render_template('home.html')
-
-@app.route("/predict")
-def predict():
-    return "Give me a prediction of the outcome"
+        return render_template('home.html', prediction=prediction, 
+                               percentyeschurn=percentyeschurn, 
+                               percentnochurn=percentnochurn,
+                               age=age, zip_code=zip_code, contract_type=contract_type_text, 
+                               has_internet_service=internet_service_text, total_monthly_fee=total_monthly_fee, 
+                               payment_method=payment_method_text, tenure_months=tenure_months, 
+                               num_referrals=num_referrals)
+        
+    return render_template('home.html', age=30, zip_code=90001, contract_type="One Year", 
+                           has_internet_service="yes", total_monthly_fee=20.00, 
+                           payment_method="Credit Card", tenure_months=12, num_referrals=0)
 
 if __name__ == "__main__":
     app.run(debug=True) # default host: localhost, default port: 5000
