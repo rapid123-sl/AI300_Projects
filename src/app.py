@@ -30,7 +30,11 @@ def home():
                            has_internet_service="yes", total_monthly_fee=20.00, 
                            payment_method="Credit Card", tenure_months=12, num_referrals=0)
 
-# can't seem to get this to work... guess the fields will be less dynamic
+if __name__ == "__main__":
+    app.run(debug=True) # default host: localhost, default port: 5000
+
+
+# can't seem to get dynamic fields to work using input_processing. Works only with HTML rendering
 # @app.route("/", methods=['GET', 'POST'])
 # def home():
 #     if request.method == 'POST':
@@ -60,6 +64,7 @@ def home():
 #                            has_internet_service="yes", total_monthly_fee=20.00, 
 #                            payment_method="Credit Card", tenure_months=12, num_referrals=0)
 
+# Completed HTML rendering method, with dynamic fields
 # @app.route("/", methods=['GET', 'POST'])
 # def home():
 #     if request.method == 'POST':
@@ -120,7 +125,7 @@ def home():
 #                            payment_method="Credit Card", tenure_months=12, num_referrals=0)
 
 
-# # attempting JSON method now, but something is wrong...
+# attempted JSON method now, but something is wrong... 
 # @app.route('/api/predict', methods=['POST'])
 # def predict():
 #     request_data = request.get_json()
@@ -139,6 +144,3 @@ def home():
 
 #     return {'prediction': prediction, 'percentyeschurn': percentyeschurn,
 #             'percentnochurn': percentnochurn}
-
-if __name__ == "__main__":
-    app.run(debug=True) # default host: localhost, default port: 5000
