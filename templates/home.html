@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Churn Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styling.css') }}">
+</head>
+<body>
+    <h1>Churn  Prediction</h1>
+    <form method="POST">
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br><br>
+        
+        <label for="zip_code">Zip Code:</label><br>
+        <input type="text" id="zip_code" name="zip_code"><br><br>
+        
+        <label for="contract_type">Contract Type:</label><br>
+        <input type="text" id="contract_type" name="contract_type"><br><br>
+        
+        <label for="has_internet_service">Has Internet Service:</label><br>
+        <input type="text" id="has_internet_service" name="has_internet_service"><br><br>
+        
+        <label for="total_monthly_fee">Total Monthly Fee:</label><br>
+        <input type="text" id="total_monthly_fee" name="total_monthly_fee"><br><br>
+        
+        <label for="payment_method">Payment Method:</label><br>
+        <input type="text" id="payment_method" name="payment_method"><br><br>
+        
+        <label for="tenure_months">Tenure Months:</label><br>
+        <input type="text" id="tenure_months" name="tenure_months"><br><br>
+        
+        <label for="num_of_referrals">Number of Referrals:</label><br>
+        <input type="text" id="num_of_referrals" name="num_of_referrals"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if prediction is defined %}
+        <h2>Predicted Churn Status: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
