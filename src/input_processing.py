@@ -29,5 +29,17 @@ def format_model_inputs(input_dict):
     tenure_months = int(input_dict['tenure_months']) # MIN - 1 MAX - 72
     num_referrals = int(input_dict['num_referrals']) # MIN - 0 MAX - 11
 
-    return [age, zip_code, contract_type, has_internet_service, total_monthly_fee, 
-                    payment_method, tenure_months, num_referrals]
+    return {
+        'model_inputs': [age, zip_code, contract_type, has_internet_service, total_monthly_fee, 
+                         payment_method, tenure_months, num_referrals],
+        'form_data': {
+            'age': age,
+            'zip_code': zip_code,
+            'contract_type_text': contract_type_text,
+            'internet_service_text': internet_service_text,
+            'total_monthly_fee': total_monthly_fee,
+            'payment_method_text': payment_method_text,
+            'tenure_months': tenure_months,
+            'num_referrals': num_referrals
+        }
+    }
