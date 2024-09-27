@@ -1,6 +1,6 @@
 # AI300_Projects
 
-## Codebase Author
+## Codebase Author(s)
 
 ```
 Samuel
@@ -30,7 +30,12 @@ Samuel
 
 ## Website URL of deployed Flask web application 
 
-(TBC)
+```
+[Deployed Web App URL](http://ec2-3-0-57-219.ap-southeast-1.compute.amazonaws.com/)
+
+[Dockerhub URL](https://hub.docker.com/r/samuellws/flask-app/tags)
+
+```
 
 ## Details on chosen final model and model parameters
 
@@ -55,8 +60,3 @@ CatBoostClassifier(
  Accuracy: 0.8122020972354623
 
 ```
-
-## About This Repo
-
-- Package dependencies can be found in `requirements.txt` file.
-- Command to start Flask app: `python src/app.py`
