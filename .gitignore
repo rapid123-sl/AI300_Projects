@@ -5,6 +5,3 @@ venv/
 notebooks/.ipynb_checkpoints/
 __pycache__/
 catboost_info/
-
-# Extra/tria/unfinished code
-src/extra_code.py/
