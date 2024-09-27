@@ -30,12 +30,11 @@ Samuel
 
 ## Website URL of deployed Flask web application 
 
-```
+
 [Deployed Web App URL](http://ec2-3-0-57-219.ap-southeast-1.compute.amazonaws.com/)
 
 [Dockerhub URL](https://hub.docker.com/r/samuellws/flask-app/tags)
 
-```
 
 ## Details on chosen final model and model parameters
 
