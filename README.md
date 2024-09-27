@@ -3,7 +3,7 @@
 ## Codebase Author(s)
 
 ```
-Samuel
+Samuel Lee Wei Sheng
 
 ```
 
